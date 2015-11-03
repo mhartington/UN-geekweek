@@ -1,6 +1,6 @@
 <ion-view view-title="Hello">
   <ion-content>
-    <ion-item ng-repeat="user in users">
+    <ion-item ng-repeat="user in users" ui-sref="detail({userIndex: $index})">
       {{user.user.name.first}}
       </ion-item>
     </ion-content>
