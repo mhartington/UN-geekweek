@@ -9,28 +9,28 @@ angular.module('starter', ['ionic', 'mainController', 'services'])
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
+    if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
-    if(window.StatusBar) {
+    if (window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
 })
 
 
-.config(function($stateProvider, $urlRouterProvider){
+.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-  .state('main', {
-    url: '/',
-    templateUrl: 'templates/main/main.html',
-    controller: 'MainCtrl' 
-  })
-  
+    .state('main', {
+      url: '/',
+      templateUrl: 'templates/main/main.html',
+      controller: 'MainCtrl'
+    })
+
   .state('detail', {
     url: '/detail',
-    templateUrl: 'templates/detail/detail.html' 
+    templateUrl: 'templates/detail/detail.html'
   })
- 
-$urlRouterProvider.otherwise('/')
+
+  $urlRouterProvider.otherwise('/')
 });
